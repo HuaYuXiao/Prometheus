@@ -6,18 +6,13 @@ _ext
 nano.save
 .catkin_workspace
 
-build/
-devel/
-dist/
-.vscode/
-Modules/object_detection_landing/
-Modules/object_detection_persistence/
-Modules/object_detection_yolov5openvino/
-Modules/object_detection_yolov5tensorrt/
-Modules/object_detection_circlex/
-Modules/data/
-Modules/object_detection_oneshot/
-Modules/oriented_detection_segs/
+build
+devel
+install
+
+dist
+.vscode
+.idea
 
 # pytorch/python/numpy formats
 # *.pth
