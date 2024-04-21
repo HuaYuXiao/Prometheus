@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
-add_compile_options(-std=c++11)
 project(prometheus_slam)
+
+add_compile_options(-std=c++14)
+set(CMAKE_CXX_FLAGS "-std=c++14")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
+set(CMAKE_CXX_STANDARD 14)
 
 find_package(PCL 1.7 REQUIRED)
 find_package(octomap REQUIRED)
@@ -70,5 +74,3 @@ target_link_libraries(pc2_saver_node
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
-
-
