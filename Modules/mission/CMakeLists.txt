@@ -3,6 +3,8 @@ project(prometheus_mission)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
+set(CMAKE_CXX_FLAGS "-std=c++14")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -21,11 +23,8 @@ find_package(catkin REQUIRED COMPONENTS
   mavros_msgs
   prometheus_msgs
 )
-
 ##  System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED COMPONENTS system)
-
-
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -43,7 +42,6 @@ catkin_package(
   CATKIN_DEPENDS  message_runtime
 )
 
-
 ###########
 ## Build ##
 ###########
@@ -54,10 +52,9 @@ include_directories(
   include
   autonomous_landing
   ${catkin_INCLUDE_DIRS}
-  ../common/include
-  ../control/include
+  $ENV{HOME}/Prometheus/Modules/common/include
+        $ENV{HOME}/Prometheus/Modules/uav_control/include
 )
-
 
 ###############################
 ##      声明可执行cpp文件     ##
