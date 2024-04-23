@@ -13,7 +13,6 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_msgs
   prometheus_msgs
 )
-
 ## System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED COMPONENTS system)
 
@@ -26,10 +25,11 @@ include_directories(
     include
     ${catkin_INCLUDE_DIRS}
 )
+
 ###############################
 ##      声明可执行cpp文件     ##
 ###############################
-add_executable(set_model_state_example cpp_nodes/set_model_state_example.cpp)
+add_executable(set_model_state_example src/cpp_nodes/set_model_state_example.cpp)
 add_dependencies(set_model_state_example prometheus_gazebo_gencpp)
 target_link_libraries(set_model_state_example ${catkin_LIBRARIES})
 

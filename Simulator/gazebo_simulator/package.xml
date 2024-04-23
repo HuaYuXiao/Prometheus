@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>prometheus_gazebo</name>
-  <version>0.0.0</version>
+  <version>1.0.1</version>
   <description>The prometheus_gazebo package</description>
 
-  <maintainer email="qiyh8@mail.sysu.edu.cn">Yuhua Qi</maintainer>
+  <maintainer email="hyx020222@gmail.com">Eason Hua</maintainer>
 
-  <license>TODO</license>
+  <license>MIT</license>
 
   <build_depend>message_generation</build_depend>
   <exec_depend>message_runtime</exec_depend>
